@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background">
+
+    <Switch
+        android:id="@+id/musicSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/switchside"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginEnd="@dimen/switchside"
+        android:checked="true"
+        android:text="Background Music"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/eighteen_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/notifSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/switchside"
+        android:layout_marginTop="@dimen/view_gap"
+        android:layout_marginEnd="@dimen/switchside"
+        android:checked="true"
+        android:text="Notifications"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/eighteen_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/musicSwitch" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

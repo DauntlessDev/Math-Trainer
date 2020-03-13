@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:enabled="true"
+        android:padding="@dimen/padding_go"
+        android:textColor="@color/text_color"
+        android:text="@string/go_text"
+        android:textSize="@dimen/go_size"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="@dimen/choice_width"
+        android:layout_height="@dimen/choice_height"
+        android:layout_marginStart="@dimen/choice_margin_start"
+        android:layout_marginTop="@dimen/margin_top"
+        android:background="@android:color/holo_orange_light"
+        android:gravity="center"
+        android:padding="@dimen/small_padding"
+        android:text="@string/timer_string"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/number_size"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="@dimen/choice_width"
+        android:layout_height="@dimen/choice_height"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginEnd="@dimen/choice_margin_start"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:padding="@dimen/small_padding"
+        android:text="@string/starting_score"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/number_size"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/number_margin_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionTextView">
+
+        <Button
+            android:id="@+id/buttonView0"
+            android:layout_width="@dimen/dimen_button"
+            android:layout_height="@dimen/dimen_button"
+            android:background="@android:color/holo_red_light"
+            android:enabled="false"
+            android:padding="@dimen/medium_padding"
+            android:tag="@string/tag_first"
+            android:text="@string/fake_num"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/medium_number"
+            android:visibility="invisible"
+            app:layout_column="@string/tag_first"
+            app:layout_row="@string/tag_first" />
+
+        <Button
+            android:id="@+id/buttonView1"
+            android:layout_width="@dimen/dimen_button"
+            android:layout_height="@dimen/dimen_button"
+            android:background="@android:color/holo_purple"
+            android:enabled="false"
+            android:textColor="@color/text_color"
+            android:padding="@dimen/medium_padding"
+            android:tag="@string/tag_second"
+            android:text="@string/fake_num"
+            android:textSize="@dimen/medium_number"
+            android:visibility="invisible"
+            app:layout_column="@string/tag_second"
+            app:layout_row="@string/tag_first" />
+
+        <Button
+            android:id="@+id/buttonView2"
+            android:layout_width="@dimen/dimen_button"
+            android:layout_height="@dimen/dimen_button"
+            android:background="@android:color/holo_blue_light"
+            android:enabled="false"
+            android:textColor="@color/text_color"
+            android:padding="@dimen/medium_padding"
+            android:tag="@string/tag_third"
+            android:text="@string/fake_num"
+            android:textSize="@dimen/medium_number"
+            android:visibility="invisible"
+            app:layout_column="@string/tag_first"
+            app:layout_row="@string/tag_second" />
+
+        <Button
+            android:id="@+id/buttonView3"
+            android:layout_width="@dimen/dimen_button"
+            android:layout_height="@dimen/dimen_button"
+            android:background="@android:color/holo_green_dark"
+            android:enabled="false"
+            android:padding="@dimen/medium_padding"
+            android:tag="@string/tag_fourth"
+            android:text="@string/fake_num"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/medium_number"
+            android:visibility="invisible"
+            app:layout_column="@string/tag_second"
+            app:layout_row="@string/tag_second" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_2"
+        android:text="@string/starting_question"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/number_size"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/scoreTextView"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toEndOf="@+id/timerTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTextView" />
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/number_margin_1"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/number_size"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <Button
+        android:id="@+id/againButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="@string/play_again_text"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/button_textsize"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gridLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

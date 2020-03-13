@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="colorPrimary">#FF7000</color>
+    <color name="colorPrimaryDark">#973115</color>
+    <color name="colorAccent">#FFC100</color>
+    <color name="main_background">#FFFAE1</color>
+    <color name="text_color">#000000</color>
+    <color name="gray">#5F5E5E</color>
+    <color name="color_orange">#E65606</color>
+    <color name="yellow_background">#FFE15A</color>
+    <color name="red_orange">#FF5100</color>
+</resources>
